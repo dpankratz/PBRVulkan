@@ -2,6 +2,7 @@
 
 #include "../Vulkan/Raytracer.h"
 #include "../Vulkan/Computer.h"
+#include "Cinema.h"
 
 namespace Tracer
 {
@@ -28,6 +29,7 @@ namespace Tracer
 		void RecreateSwapChain();
 		void RecompileShaders();
 		void CreateMenu();
+		void CreateCinema();
 		void ResetAccumulation();
 		void ResizeWindow() const;
 		void PrintGPUInfo() const;
@@ -43,6 +45,7 @@ namespace Tracer
 		std::unique_ptr<class Menu> menu;
 		std::unique_ptr<class Compiler> compiler;
 		std::unique_ptr<class Vulkan::Computer> computer;
+		std::unique_ptr<class Cinema> cinema;
 
 		uint32_t frame = 0;
 	};

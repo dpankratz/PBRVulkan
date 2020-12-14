@@ -57,6 +57,7 @@ namespace Tracer
 		RegisterCallbacks();
 		Raytracer::CreateSwapChain();
 		CreateMenu();
+		CreateCinema();
 		CreateComputePipeline();
 	}
 
@@ -136,6 +137,11 @@ namespace Tracer
 		menu->AddWidget(std::make_shared<Interface::SceneWidget>());
 		menu->AddWidget(std::make_shared<Interface::RendererWidget>());
 		menu->AddWidget(std::make_shared<Interface::CinemaWidget>());
+	}
+
+	void Application::CreateCinema()
+	{
+		cinema.reset(new Cinema(""));
 	}
 
 	void Application::ResetAccumulation()
@@ -221,6 +227,7 @@ namespace Tracer
 			return;
 
 		scene->GetCamera().OnKeyChanged(key, scanCode, action, mods);
+		cinema->OnKeyChanged(key, scanCode, action, mods);
 	}
 
 	void Application::OnCursorPositionChanged(double xpos, double ypos)

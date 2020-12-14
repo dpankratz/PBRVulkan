@@ -282,6 +282,9 @@
     <ClCompile Include="src\Vulkan\Computer.cpp">
       <Filter>Computer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Tracer\Cinema.cpp">
+      <Filter>Tracer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vulkan\Device.h">
@@ -451,6 +454,9 @@
     </ClInclude>
     <ClInclude Include="src\Geometry\Compute.h">
       <Filter>Geometry\Uniforms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tracer\Cinema.h">
+      <Filter>Tracer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
