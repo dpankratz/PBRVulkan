@@ -21,10 +21,10 @@ namespace Tracer
 		std::string TOKEN_INTEGRATOR = "// ====== INTEGRATOR ======";
 		std::string TOKEN_DEFINES = "// ====== DEFINES ======";
 
-		std::string RAY_HIT_SHADER = "../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
-		std::string RAY_MISS_SHADER = "../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
-		std::string RAY_SHADOW_SHADER = "../RayTracer/src/Assets/Shaders/Raytracer/Shadow";
-		std::string RAY_GEN_SHADER = "../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
+		std::string RAY_HIT_SHADER = "../../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
+		std::string RAY_MISS_SHADER = "../../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
+		std::string RAY_SHADOW_SHADER = "../../RayTracer/src/Assets/Shaders/Raytracer/Shadow";
+		std::string RAY_GEN_SHADER = "../../RayTracer/src/Assets/Shaders/Raytracer/Raytracing";
 
 		std::map<Include, std::string> INCLUDES = {
 			{ Include::PATH_TRACER_DEFAULT, "#include \"Integrators/PathTracer.glsl\"" },
@@ -119,7 +119,7 @@ namespace Tracer
 			outShader.close();
 		}
 
-		std::system("python ./scripts/Compile.py");
+		std::system("python ../../RayTracer/scripts/Compile.py");
 
 		std::cout << "[COMPILER] Shaders compilation has ended." << std::endl;
 	}
